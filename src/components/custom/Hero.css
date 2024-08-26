@@ -1,0 +1,374 @@
+.hero {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.side-adjust {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15%; 
+}
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/background3.png');
+  background-size: contain; 
+  background-position: top;
+  background-repeat: no-repeat; 
+  background-position: center;
+  opacity: 30%;
+  z-index: -1; 
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: black;
+  padding: 0 20px;
+}
+
+.hero span {
+  color: #e64949fa; 
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #756e6e;
+  margin: 40px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.started-button {
+  background-color: #d41c1cfa;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex; 
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px; 
+  justify-content: center;
+  align-self: center;
+}
+
+.started-button:hover {
+  background-color: #e04646; 
+  transform: scale(1.05); 
+}
+
+.started-button svg {
+  font-size: 1.25rem; 
+  color: white;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  z-index: 1; 
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 180px;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  margin-top: 40px;
+}
+
+.feature-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  color: #e64949fa;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.content1 {
+  margin-top: 100px;
+}
+
+.heading1 h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading1 h1 span {
+  color: #e04646;
+}
+
+.content-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15%;
+}
+
+.content-top-1 {
+  max-width: 50%;
+  padding: 0 20px;
+}
+
+.content-top-1 h1 {
+  font-size: 2rem;
+  font-weight: 1000; 
+  color: #333; 
+  margin-bottom: 20px;
+}
+
+.content-top-1 p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  font-weight: normal; 
+}
+
+.content-top img {
+  max-width: 40%;
+  background-color: transparent;
+}
+
+.predefined-trips {
+  margin-top: 100px;
+  text-align: center;
+  padding: 0 15%;
+}
+
+.trip-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.trip-card {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s;
+  width: 250px;
+}
+
+.trip-card:hover {
+  transform: scale(1.05);
+}
+
+.customized-itineraries {
+  margin-top: 100px;
+  text-align: center;
+  padding: 0 15%;
+}
+
+.customized-itineraries h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: black;
+}
+
+.customized-itineraries span {
+  color: #e04646;
+}
+
+.customized-itineraries p {
+  font-size: 1.25rem;
+  color: #666;
+  margin: 20px 0;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.paragraphs div {
+  max-width: 33%;
+}
+
+.paragraphs h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 30px 0 20px 0;
+  color: #333;
+}
+
+.paragraphs p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20%;
+}
+
+@media screen and (max-width: 991px) {
+  .side-adjust {
+    padding: 0 5%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .content-top {
+    flex-direction: row;
+  }
+
+  .content-top-1 {
+    max-width: 100%;
+  }
+
+  .trip-card {
+    width: 100%;
+  }
+
+  .paragraphs div {
+    max-width: 100%;
+  }
+
+  .paragraphs {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .content-top-1 h1 {
+    font-size: 1.75rem;
+  }
+
+  .content-top-1 p {
+    font-size: 1rem;
+  }
+
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .feature-item {
+    width: 150px;
+    padding: 15px;
+  }
+  
+  .feature-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .feature-item p {
+    font-size: 0.875rem;
+  }
+
+  .paragraphs{
+    flex-direction: column;
+  }
+
+  .paragraphs h2{
+    margin-top: 10px;
+  }
+
+  .paragraphs p{
+    margin-bottom: 30px;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.875rem;
+  }
+
+  .started-button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+
+  
+
+  .content-top {
+    padding: 0 5%;
+  }
+
+  .content-top-1 h1 {
+    font-size: 1.5rem;
+  }
+
+  .trip-card {
+    width: 100%;
+  }
+
+  .customized-itineraries h1 {
+    font-size: 2rem;
+  }
+
+  .customized-itineraries p {
+    font-size: 1rem;
+  }
+
+  .paragraphs {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .paragraphs div {
+    max-width: 100%;
+  }
+}
+
+
+

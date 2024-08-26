@@ -1,0 +1,29 @@
+.back-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.button {
+    background-color: #d41c1cfa;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 9999px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+    justify-content: center;
+    align-self: center;
+}
+
+.button:hover {
+    background-color: #e04646;
+    transform: scale(1.05);
+}

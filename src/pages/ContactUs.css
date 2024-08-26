@@ -1,0 +1,73 @@
+.contactUs{
+    margin: 80px 120px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contactus-left{
+    width: 50%;
+}
+
+.contactus-head{
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 5px;
+    color: #e64949fa;
+}
+
+.contactus-heading{
+    font-size: 50px;
+    font-weight: 1000;
+    color: rgb(49, 47, 47);
+}
+
+.form-group input{
+    width: 50%;
+    border-bottom: 2px solid #e64949fa;
+    height: 45px;
+    padding: 5px;
+    outline: none;
+}
+
+.form-group{
+    padding: 20px 0 ;
+}
+
+.form-group select{
+    padding: 5px;
+    padding-top: 20px;
+    width: 50%;
+    border-bottom: 2px solid #e64949fa;
+    outline: none;
+}
+
+.form-group button{
+    color: white;
+    font-size: 20px;
+    background-color: #e64949fa;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form-group textarea{
+    width: 50%;
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+
+.contact-right{
+    width: 50%;
+}
+
+.contact-right img{
+    width: 500px;
+    height: 500px;
+    
+}
+
+.contact-right .img2{
+    width: 600px;
+    height: 100px;
+    margin-bottom: 20px;
+}

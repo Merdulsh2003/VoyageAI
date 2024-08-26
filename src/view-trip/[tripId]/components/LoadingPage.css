@@ -1,0 +1,8 @@
+.loading{
+    width: 100vh;
+    height: 100vh;
+}
+.heading h1{
+    font-size: 50px;
+    font-weight: 700;
+}
