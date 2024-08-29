@@ -1,0 +1,114 @@
+.my-trips-container {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 40px 15%;
+}
+
+.my-trips-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.my-trips-title span {
+    color: #e64949fa;
+}
+
+.my-trips-title-quote {
+    font-size: 1.25rem;
+    color: #756e6e;
+    margin: 40px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.placeholder {
+    height: 250px;
+    background-color: #E2E8F0;
+    animation: pulse 1.5s infinite;
+    border-radius: 0.75rem;
+}
+
+.create-trip-button {
+    width: 100%;
+    padding: 20px;
+    font-size: 25px;
+    background-color: #e64949fa;
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.create-trip-button:hover {
+    background-color: #d41c1cfa;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 991px) {
+    .my-trips-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .my-trips-title {
+        font-size: 3rem;
+    }
+
+    .create-trip-button {
+        font-size: 16px;
+        padding: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-trips-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .create-trip-button {
+        font-size: 14px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .my-trips-container {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .my-trips-title {
+        font-size: 3rem;
+    }
+
+    .create-trip-button {
+        font-size: 12px;
+        padding: 14px;
+    }
+}

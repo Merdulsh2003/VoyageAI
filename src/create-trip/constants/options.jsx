@@ -13,7 +13,7 @@ export const SelectTravelsList = [
       desc: 'A sole traveler in exploration',
       icon: '✈️',
       people: '1',
-      image: solotrip, // Path to the image
+      image: solotrip, 
   },
   {
       id: 2,
@@ -21,7 +21,7 @@ export const SelectTravelsList = [
       desc: 'Two travelers in tandem',
       icon: '🥂',
       people: '2',
-      image: coupletrip // Path to the image
+      image: coupletrip 
   },
   {
       id: 3,
@@ -29,7 +29,7 @@ export const SelectTravelsList = [
       desc: 'A group of fun-loving adventurers',
       icon: '🏡',
       people: '3 to 5 People',
-      image: familytrip, // Path to the image
+      image: familytrip, 
   },
   {
       id: 4,
@@ -37,7 +37,7 @@ export const SelectTravelsList = [
       desc: 'A bunch of thrill-seekers',
       icon: '⛵',
       people: '5 to 10 People',
-      image: friendstrip // Path to the image
+      image: friendstrip 
   },
 ]
 
@@ -48,21 +48,21 @@ export const SelectBudgetOptions = [
       title: 'Cheap',
       desc: 'Stay conscious of costs',
       icon: '💵',
-      image: cheapPrice, // Path to the image
+      image: cheapPrice, 
   },
   {
       id: 2,
       title: 'Moderate',
       desc: 'Keep cost on the average side',
       icon: '💰',
-      image: mediumprice, // Path to the image
+      image: mediumprice, 
   },
   {
       id: 3,
       title: 'Luxury',
       desc: 'Don’t worry about cost',
       icon: '💸',
-      image: richprice, // Path to the image
+      image: richprice, 
   },
   
 ]

@@ -1,0 +1,90 @@
+.place-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 1.25rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.place-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.place-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.place-card-title {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.place-card-details {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.place-card-time {
+    margin-top: 0.5rem;
+}
+
+.place-card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 450px) {
+    .place-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .place-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .place-card-title {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 768px) {
+    .place-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .place-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .place-card-title {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .place-card {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .place-card img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .place-card-title {
+        font-size: 1.125rem;
+    }
+}

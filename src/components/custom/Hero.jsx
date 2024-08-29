@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { VscGitPullRequestCreate } from "react-icons/vsc";
 import { MdOutlineAddLocationAlt } from "react-icons/md";
 import { CiHeart } from "react-icons/ci";
@@ -9,13 +9,9 @@ import { TbCloudDataConnection } from "react-icons/tb";
 import tripPic1 from '../../assets/trip-pic.png';
 import tripPic2 from '../../assets/trip-pic-2.png';
 
-const predefinedTrips = [
-  { id: 'paris', name: 'Trip to Paris', description: 'Explore the city of lights!' },
-  { id: 'beach', name: 'Beach Vacation', description: 'Relax on the sunny beaches!' },
-];
-
 function Hero() {
-  return (
+
+   return (
     <div className="hero">
       <div className="hero-background"></div>
       <div className="side-adjust">
@@ -72,19 +68,8 @@ function Hero() {
           </div>
         </div>
       </div>
-{/*
-      <div className="predefined-trips">
-        <h2>Predefined Trips</h2>
-        <div className="trip-list">
-          {predefinedTrips.map(trip => (
-            <Link key={trip.id} to={`/customize-trip/${trip.id}`} className="trip-card">
-              <h3>{trip.name}</h3>
-              <p>{trip.description}</p>
-            </Link>
-          ))}
-        </div>
-      </div>
-*/}
+
+
       <div className="customized-itineraries">
         <h1>Tailored <span>Itineraries </span>for Every Travel Dream</h1>
         <p className='special-p'>VoyageAI is your ultimate travel companion, designed for solo adventures, family vacations, and group expeditions. Experience travel planning like never before with:</p>

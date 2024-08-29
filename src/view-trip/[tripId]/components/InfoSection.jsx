@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Button } from '@/components/ui/button';
 import { BsFillSendFill } from "react-icons/bs";
+import './InfoSection.css'; // Import the CSS file
 
 function InfoSection({ trip }) {
     const [locationImage, setLocationImage] = useState('/placeholder.jpg');
-    const unsplashAccessKey = '_es3Byyisu3GRvHAiv4eqy6wvfAOqWuYq6Az0jJOVOA'; // Your Unsplash Access Key
+    const unsplashAccessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 
     useEffect(() => {
         async function fetchLocationImage() {
@@ -32,18 +33,17 @@ function InfoSection({ trip }) {
 
     return (
         <div>
-            <img src={locationImage} className='h-[348px] w-full object-cover rounded-xl' alt='Destination' />
+            <img src={locationImage} className='info-image' alt='Destination' />
 
-            <div className='flex justify-between items-center'>
-                <div className='my-5 flex flex-col gap-2'>
-                    <h2 className='font-bold text-2xl'>{trip?.userSelection?.location}</h2>
-                    <div className='flex gap-5'>
-                        <h2 className='p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-md'>{trip?.userSelection?.days} Day</h2>
-                        <h2 className='p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-md'>{trip?.userSelection?.budget} Budget</h2>
-                        <h2 className='p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-md'>Travel With: {trip?.userSelection?.travelMode}</h2>
+            <div className='info-container'>
+                <div className='info-details'>
+                    <h2 className='info-location'>{trip?.userSelection?.location}</h2>
+                    <div className='info-tags'>
+                        <h2 className='info-tag info-tag-md'>{trip?.userSelection?.days} Day</h2>
+                        <h2 className='info-tag info-tag-md'>{trip?.userSelection?.budget} Budget</h2>
+                        <h2 className='info-tag info-tag-md'>Travel With: {trip?.userSelection?.travelMode}</h2>
                     </div>
                 </div>
-                <Button><BsFillSendFill /></Button>
             </div>
         </div>
     );

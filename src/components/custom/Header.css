@@ -8,10 +8,8 @@
     z-index: 3;
     position: relative;
     border-bottom: 0.5px solid gray;
-    background-color: #fff; /* Ensure a clean background */
+    background-color: #fff;
 }
-
-/* Adjusted styles previously using Tailwind CSS */
 .user-options {
     display: flex;
     align-items: center;
@@ -30,27 +28,26 @@
 
 .sign-in-title {
     font-weight: bold;
-    font-size: 1.125rem; /* Tailwind's text-lg equivalent */
-    margin-top: 1.75rem; /* Tailwind's mt-7 equivalent */
+    font-size: 1.125rem; 
+    margin-top: 1.75rem; 
 }
 
 .google-signin-btn {
     width: 100%;
-    margin-top: 1.25rem; /* Tailwind's mt-5 equivalent */
+    margin-top: 1.25rem; 
     display: flex;
-    gap: 1rem; /* Tailwind's gap-4 equivalent */
+    gap: 1rem; 
     align-items: center;
 }
 
 .google-icon {
-    height: 1.75rem; /* Tailwind's h-7 equivalent */
-    width: 1.75rem; /* Tailwind's w-7 equivalent */
+    height: 1.75rem; 
+    width: 1.75rem; 
 }
 
-/* Responsive adjustments */
 .logo {
     height: 40px;
-    width: 150px; /* Adjusted width for smaller screens */
+    width: 150px; 
     transition: width 0.3s ease;
 }
 

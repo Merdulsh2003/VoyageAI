@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PlaceCardItem from './PlaceCardItem';
+import './PlacesToVisit.css'; 
 
 function PlacesToVisit({ trip }) {
     const [placeImages, setPlaceImages] = useState({});
-    const unsplashAccessKey = '_es3Byyisu3GRvHAiv4eqy6wvfAOqWuYq6Az0jJOVOA'; // Your Unsplash Access Key
+    const unsplashAccessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 
     useEffect(() => {
         async function fetchPlaceImages() {
@@ -37,17 +38,17 @@ function PlacesToVisit({ trip }) {
     }, [trip, unsplashAccessKey]);
 
     return (
-        <div>
-            <h2 className='font-bold text-lg'>Places to Visit</h2>
+        <div className='places-to-visit'>
+            <h2 className='places-to-visit-title'>Places to Visit</h2>
 
             <div>
                 {trip.tripData?.itinerary.map((item, index) => (
                     <div key={index} className='mt-5'>
-                        <h2 className='font-medium text-lg'>{item.day}</h2>
-                        <div className='grid md:grid-cols-2 gap-5'>
+                        <h2 className='places-to-visit-day'>{item.day}</h2>
+                        <div className='places-to-visit-grid'>
                             {item.plan.map((place, index) => (
-                                <div key={index} className='my-3'>
-                                    <h2 className='font-medium text-sm text-orange-600'>{place.time}</h2>
+                                <div key={index} className='place-card-item'>
+                                    <h2 className='place-card-time'>{place.time}</h2>
                                     <PlaceCardItem 
                                         place={{ 
                                             ...place, 

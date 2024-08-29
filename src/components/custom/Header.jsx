@@ -23,7 +23,7 @@ const Header = () => {
     axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${tokenInfo?.access_token}`, {
       headers: {
         Authorization: `Bearer ${tokenInfo?.access_token}`,
-        Accept: 'application/json' // Fixed content type header
+        Accept: 'application/json' 
       }
     }).then((resp) => {
       console.log(resp);
@@ -42,9 +42,9 @@ const Header = () => {
       <div>
         {users ?
           <div className='user-options'>
-            {/*<a href='/my-trips'>
+            <a href='/my-trips'>
               <Button variant="outline" className="rounded-full">My Trips</Button>
-            </a>*/}
+            </a>
             <Popover>
               <PopoverTrigger>
                 <img src={users?.picture} className='profile-pic' alt="User Profile" />

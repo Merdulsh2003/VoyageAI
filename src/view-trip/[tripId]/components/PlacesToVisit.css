@@ -1,0 +1,65 @@
+.places-to-visit {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.places-to-visit-title {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.places-to-visit-day {
+    font-weight: 500;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.places-to-visit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+}
+
+.place-card-item {
+    margin-bottom: 1rem;
+}
+
+.place-card-time {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #fb923c;
+}
+
+@media (max-width: 450px) {
+    .places-to-visit-title,
+    .places-to-visit-day {
+        font-size: 1rem;
+    }
+
+    .place-card-time {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 768px) {
+    .places-to-visit-title,
+    .places-to-visit-day {
+        font-size: 1.125rem;
+    }
+
+    .place-card-time {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .places-to-visit-title,
+    .places-to-visit-day {
+        font-size: 1.125rem;
+    }
+
+    .place-card-time {
+        font-size: 0.875rem;
+    }
+}

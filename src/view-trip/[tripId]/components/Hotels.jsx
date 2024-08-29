@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './Hotels.css'; // Import the CSS file
 
 function Hotels({ trip }) {
     const [hotelImages, setHotelImages] = useState({});
-    const unsplashAccessKey = '_es3Byyisu3GRvHAiv4eqy6wvfAOqWuYq6Az0jJOVOA'; // Your Unsplash Access Key
+    const unsplashAccessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY; 
 
     useEffect(() => {
         async function fetchHotelImages() {
@@ -12,7 +13,6 @@ function Hotels({ trip }) {
 
             const promises = trip.tripData.hotelOptions.map(async (hotel) => {
                 try {
-                    // Combine hotel name and address for the query
                     const query = `${hotel?.hotelName || 'hotel'} ${hotel?.hotelAddress || 'address'}`;
                     const response = await axios.get('https://api.unsplash.com/search/photos', {
                         params: {
@@ -48,26 +48,26 @@ function Hotels({ trip }) {
 
     return (
         <div>
-            <h2 className='font-bold text-xl mt-5'>Hotel Recommendation</h2>
+            <h2 className='hotel-container'>Hotel Recommendation</h2>
 
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+            <div className='grid-container'>
                 {trip?.tripData?.hotelOptions?.map((hotel, index) => (
                     <Link
-                        key={index} // Add this key prop
+                        key={index}
                         to={'https://www.google.com/maps/search/?api=1&query=' + hotel?.hotelName + "," + hotel?.hotelAddress}
                         target='_blank'
                     >
-                        <div className='hover:scale-110 transition-all cursor-pointer'>
+                        <div className='hotel-card'>
                             <img
                                 src={hotelImages[hotel?.hotelName] || '/placeholder.jpg'}
-                                className='rounded-xl w-full h-48 object-cover' // Fixed size
+                                className='hotel-image'
                                 alt='Hotel'
                             />
-                            <div className='my-2 flex flex-col gap-2'>
-                                <h2 className='font-medium'>{hotel?.hotelName}</h2>
-                                <h2 className='text-xs text-gray-500'>{hotel?.hotelAddress}</h2>
-                                <h2 className='text-sm'>{hotel?.price}</h2>
-                                <h2 className='text-sm'>{hotel?.rating}</h2>
+                            <div className='hotel-info'>
+                                <h2 className='hotel-name'>{hotel?.hotelName}</h2>
+                                <h2 className='hotel-address'>{hotel?.hotelAddress}</h2>
+                                <h2 className='hotel-price'>{hotel?.price}</h2>
+                                <h2 className='hotel-rating'>{hotel?.rating}</h2>
                             </div>
                         </div>
                     </Link>

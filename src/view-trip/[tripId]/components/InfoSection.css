@@ -1,0 +1,52 @@
+.info-image {
+    height: 348px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-details {
+    margin: 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-location {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.info-tags {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.info-tag {
+    padding: 0.25rem 0.75rem;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    color: #6b7280;
+    font-size: 0.75rem;
+}
+
+.info-tag-md {
+    font-size: 0.875rem;
+
+}
+
+
+@media (max-width: 450px) {
+
+    .info-tag-md {
+        font-size: 0.8rem;
+        
+    }
+
+}
